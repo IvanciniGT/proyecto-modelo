@@ -1,6 +1,6 @@
 import unittest
 import os
-from .generar_modelo import prepararDatos, generarModelo
+from src.generar_modelo import prepararDatos, generarModelo
 
 class CreacionModeloTest(unittest.TestCase):
     

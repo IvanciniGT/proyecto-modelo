@@ -1,6 +1,4 @@
-# --validate
-# --export
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+. $SCRIPT_DIR/env.sh
 
-export RUTA_DATOS="../data/paragraphs"
-export RUTA_DESTINO_MODELO="../target"
-python generar_modelo.py $1 $2
+python $SCRIPT_DIR/../src/generar_modelo.py $1 $2

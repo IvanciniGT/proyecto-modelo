@@ -49,6 +49,8 @@ def generarModelo(docs_train, y_train):
 
 def exportarModelo(modelo, ruta_destino_modelo):
     # Exportar el modelo
+    if not os.path.exists(ruta_destino_modelo):
+        os.makedirs(ruta_destino_modelo)
     fichero = open(ruta_destino_modelo+"/modelo.sav", 'wb')
     pickle.dump(modelo, fichero)
     fichero.close()

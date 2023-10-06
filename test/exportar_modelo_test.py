@@ -2,7 +2,7 @@ import unittest
 import os
 import pickle
 
-from .generar_modelo import prepararDatos, generarModelo, exportarModelo
+from src.generar_modelo import prepararDatos, generarModelo, exportarModelo
 
 class CreacionModeloTest(unittest.TestCase):
     
@@ -17,8 +17,8 @@ class CreacionModeloTest(unittest.TestCase):
         exportarModelo(modelo, RUTA_DESTINO_MODELO )
         
         # Importarlo
-        fichero = open(RUTA_DESTINO_MODELO, 'rb')
-        modelo_exportado = pickle.load(fichero+"/modelo.sav")
+        fichero = open(RUTA_DESTINO_MODELO+"/modelo.sav", 'rb')
+        modelo_exportado = pickle.load(fichero)
         fichero.close()
 
         # Hago una prueba
